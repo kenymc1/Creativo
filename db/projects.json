@@ -1,0 +1,116 @@
+{
+  "projects": {
+  "project1": {
+    "projectName": "Cool Song",
+    "clientName": "Kriss Rico",
+    "dueDate": "12/12/20",
+    "typeId":"music",
+    "description":"basic Reggaeton Track",
+    "uid": ""
+  },
+  "project2": {
+    "projectName": "Cool Song",
+    "clientName": "Kelly Rainbow",
+    "dueDate": "8/12/20",
+    "typeId":"music",
+    "description":"Hip Hop trap song",
+    "uid": ""
+  },
+  "project3": {
+    "projectName": "Ron Song",
+    "clientName": "Ron White",
+    "dueDate": "12/8/20",
+    "typeId":"music",
+    "description":"New track for Ron",
+    "uid": ""
+  },
+  "project4": {
+    "projectName": "Sheila Song",
+    "clientName": "Sheila Rosco",
+    "dueDate": "10/08/20",
+    "typeId":"music",
+    "description":"Slow Jam for Sheila",
+    "uid": ""
+  },
+  "project5": {
+    "projectName": "Hide Shoot",
+    "clientName": " Rhonda Sing",
+    "dueDate": "11/10/20",
+    "typeId":"photography",
+    "description":"basic Reggaeton Track",
+    "uid": ""
+  },
+  "project6": {
+    "projectName": "Cool Song",
+    "clientName": "Kriss Rico",
+    "dueDate": "10/1/20",
+    "typeId":"photography",
+    "description":"basic Reggaeton Track",
+    "uid": ""
+  },
+  "project7": {
+    "projectName": "House Shoot",
+    "clientName": "Rainbow House Shoot",
+    "dueDate": "11/14/20",
+    "typeId":"photography",
+    "description":"promotional Shoot for Kelly Rainbow",
+    "uid": ""
+  },
+  "project8": {
+    "projectName": "Cool Song shoot",
+    "clientName": "Kriss Rico",
+    "dueDate": "08/12/20",
+    "typeId":"photography",
+    "description":"photos for cd cover",
+    "uid": ""
+  },
+  "project9": {
+    "projectName": "Kelly Song logo",
+    "clientName": "Kelly Rainbow",
+    "dueDate": "09/12/20",
+    "typeId":"graphic",
+    "description":"basic Reggaeton Track",
+    "uid": ""
+  },
+  "project10": {
+    "projectName": "Cool Song",
+    "clientName": "Kriss Rico",
+    "dueDate": "12/12/12",
+    "typeId":"graphic",
+    "description":"basic Reggaeton Track",
+    "uid": ""
+  },
+  "project11": {
+    "projectName": "Cd Cover",
+    "clientName": "Kriss Rico",
+    "dueDate": "12/12/12",
+    "typeId":"graphic",
+    "description":"cd cover for cool song",
+    "uid": ""
+  },
+  "project12": {
+    "projectName": "Johnny Logo",
+    "clientName": "Johnny Lang",
+    "dueDate": "2/12/22",
+    "typeId":"graphic",
+    "description":"basic company logo",
+    "uid": ""
+  },
+  "project13": {
+    "projectName": "Launching Pad",
+    "clientName": "Patricia ",
+    "dueDate": "12/1/20",
+    "typeId":"Video",
+    "description":"Info Video",
+    "uid": ""
+  },
+  "project14": {
+    "projectName": "Lyfe & Tymes",
+    "clientName": "Kenny Mc",
+    "dueDate": "10/11/20",
+    "typeId":"Video",
+    "description":"personal Vlog",
+    "uid": ""
+  }
+}
+}
