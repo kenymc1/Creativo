@@ -6,7 +6,7 @@
     "dueDate": "12/12/20",
     "typeId":"music",
     "description":"basic Reggaeton Track",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project2": {
     "projectName": "Cool Song",
@@ -14,7 +14,7 @@
     "dueDate": "8/12/20",
     "typeId":"music",
     "description":"Hip Hop trap song",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project3": {
     "projectName": "Ron Song",
@@ -22,7 +22,7 @@
     "dueDate": "12/8/20",
     "typeId":"music",
     "description":"New track for Ron",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project4": {
     "projectName": "Sheila Song",
@@ -30,7 +30,7 @@
     "dueDate": "10/08/20",
     "typeId":"music",
     "description":"Slow Jam for Sheila",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project5": {
     "projectName": "Hide Shoot",
@@ -38,7 +38,7 @@
     "dueDate": "11/10/20",
     "typeId":"photography",
     "description":"basic Reggaeton Track",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project6": {
     "projectName": "Cool Song",
@@ -46,15 +46,15 @@
     "dueDate": "10/1/20",
     "typeId":"photography",
     "description":"basic Reggaeton Track",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project7": {
     "projectName": "House Shoot",
-    "clientName": "Rainbow House Shoot",
+    "clientName": "Kelly Rainbow",
     "dueDate": "11/14/20",
     "typeId":"photography",
     "description":"promotional Shoot for Kelly Rainbow",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project8": {
     "projectName": "Cool Song shoot",
@@ -62,7 +62,7 @@
     "dueDate": "08/12/20",
     "typeId":"photography",
     "description":"photos for cd cover",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project9": {
     "projectName": "Kelly Song logo",
@@ -70,7 +70,7 @@
     "dueDate": "09/12/20",
     "typeId":"graphic",
     "description":"basic Reggaeton Track",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project10": {
     "projectName": "Cool Song",
@@ -78,7 +78,7 @@
     "dueDate": "12/12/12",
     "typeId":"graphic",
     "description":"basic Reggaeton Track",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project11": {
     "projectName": "Cd Cover",
@@ -86,7 +86,7 @@
     "dueDate": "12/12/12",
     "typeId":"graphic",
     "description":"cd cover for cool song",
-    "uid": ""
+    "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project12": {
     "projectName": "Johnny Logo",
@@ -94,7 +94,7 @@
     "dueDate": "2/12/22",
     "typeId":"graphic",
     "description":"basic company logo",
-    "uid": ""
+    "uid": "123"
   },
   "project13": {
     "projectName": "Launching Pad",
@@ -102,7 +102,7 @@
     "dueDate": "12/1/20",
     "typeId":"Video",
     "description":"Info Video",
-    "uid": ""
+    "uid": "123"
   },
   "project14": {
     "projectName": "Lyfe & Tymes",
@@ -110,7 +110,7 @@
     "dueDate": "10/11/20",
     "typeId":"Video",
     "description":"personal Vlog",
-    "uid": ""
+    "uid": "123"
   }
 }
 }
