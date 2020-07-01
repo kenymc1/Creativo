@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import './DashBoard.scss';
 
@@ -23,11 +23,11 @@ class DashBoard extends React.Component {
     this.getAllProjects();
   }
 
-  // removePlayer = (playerId) => {
-  //   console.log('player', playerId);
-  //   playersData.deletePlayer(playerId).then(() => this.getAllPlayers())
-  //     .catch((err) => console.error('unable to delete board', err));
-  // }
+  removeCard = (projectId) => {
+    console.log('project', projectId);
+    projectData.deleteCard(projectId).then(() => this.getAllProjects())
+      .catch((err) => console.error('unable to delete card', err));
+  }
 
   // saveNewPlayer = (newPlayer) => {
   //   playersData.savePlayer(newPlayer)
@@ -55,7 +55,7 @@ class DashBoard extends React.Component {
     // const { formOpen } = this.state;
     const { projects } = this.state;
     // const { editPlayer } = this.state;
-    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project}/>);
+    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} removeCard={this.removeCard}/>);
     return (
 
       <div className="DashBoard">

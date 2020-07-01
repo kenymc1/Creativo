@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import './ProjectCard.scss';
 import projectShape from '../../helpers/propz/projectShape';
@@ -7,7 +7,13 @@ import projectShape from '../../helpers/propz/projectShape';
 class ProjectCard extends React.Component {
   static propTypes = {
     projects: projectShape.projectShape,
+    removeCard: PropTypes.func.isRequired,
+  }
 
+  deleteCardEvent = (e) => {
+    e.preventDefault();
+    const { project, removeCard } = this.props;
+    removeCard(project.id);
   }
 
   render() {
@@ -20,7 +26,7 @@ class ProjectCard extends React.Component {
           <button className="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
             {project.projectName}
           </button>
-          <div className="delete-x ml-auto"><i className="fas fa-times"></i></div>
+          <div className="delete-x ml-auto" onClick={this.deleteCardEvent}><i className="fas fa-times"></i></div>
         </h4>
       </div>
 
