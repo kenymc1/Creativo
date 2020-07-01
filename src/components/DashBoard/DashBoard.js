@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 
 import './DashBoard.scss';
 
-// import Form from '../Form/Form';
 import projectData from '../../helpers/data/projectData';
-import ProjectCard from '../ProjectCard/ProjectCard';
 import authData from '../../helpers/data/authData';
+
+import Form from '../Form/Form';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 class DashBoard extends React.Component {
   state = {
     projects: [],
-
+    formOpen: false,
   }
 
   getAllProjects = () => {
@@ -54,13 +55,15 @@ class DashBoard extends React.Component {
 
   render() {
     // const { formOpen } = this.state;
-    const { projects } = this.state;
+    const { projects, formOpen } = this.state;
     // const { editPlayer } = this.state;
     const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} removeCard={this.removeCard}/>);
     return (
 
       <div className="DashBoard">
 
+          <button className="btn btn-warning align-center"onClick={() => this.setState({ formOpen: true })}><i class="fas fa-plus-square"></i></button>
+        { formOpen ? <Form/> : ''}
         <div className="d-flex flex-wrap">
           {buildProjects}
         </div>
