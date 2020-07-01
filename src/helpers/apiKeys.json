@@ -1,12 +1,12 @@
 {
-  
-  "firebaseConfig" : {
-  "apiKey": "AIzaSyB0nH-cfZm9KHj42TMcaSqMQ9_Egv3VZaE",
-  "authDomain": "creativo-ba22e.firebaseapp.com",
-  "databaseURL": "https://creativo-ba22e.firebaseio.com",
-  "projectId": "creativo-ba22e",
-  "storageBucket": "creativo-ba22e.appspot.com",
-  "messagingSenderId": "194441321674",
-  "appId": "1:194441321674:web:c4932dfc6eeb011edf2833"
+   "firebaseKeys" : {
+    "apiKey": "AIzaSyB0nH-cfZm9KHj42TMcaSqMQ9_Egv3VZaE",
+    "authDomain": "creativo-ba22e.firebaseapp.com",
+    "databaseURL": "https://creativo-ba22e.firebaseio.com",
+    "projectId": "creativo-ba22e",
+    "storageBucket": "creativo-ba22e.appspot.com",
+    "messagingSenderId": "194441321674",
+    "appId": "1:194441321674:web:c4932dfc6eeb011edf2833"
+  } 
+
 }
- }
