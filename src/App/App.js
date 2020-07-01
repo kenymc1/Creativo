@@ -6,15 +6,19 @@ import fbConnection from '../helpers/data/connection';
 
 import Auth from '../components/Auth/Auth';
 import TheNavBar from '../components/TheNavBar/TheNavBar';
+// import Form from '../components/Form/Form';
 import DashBoard from '../components/DashBoard/DashBoard';
+import projectData from '../helpers/data/projectData';
 
 import './App.scss';
+import ProjectCard from '../components/ProjectCard/ProjectCard';
 
 fbConnection();
 
 class App extends React.Component {
   state = {
     authed: false,
+
   }
 
   componentDidMount() {
