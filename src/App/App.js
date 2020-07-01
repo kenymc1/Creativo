@@ -4,10 +4,9 @@ import 'firebase/auth';
 
 import fbConnection from '../helpers/data/connection';
 
-// import Auth from '../components/Auth/Auth';
-// import MyNavbar from '../components/MyNavbar/MyNavbar';
-// import BoardContainer from '../components/BoardContainer/BoardContainer';
-// import SingleBoard from '../components/SingleBoard/SingleBoard';
+import Auth from '../components/Auth/Auth';
+import TheNavBar from '../components/TheNavBar/TheNavBar';
+import DashBoard from '../components/DashBoard/DashBoard';
 
 import './App.scss';
 
@@ -16,7 +15,6 @@ fbConnection();
 class App extends React.Component {
   state = {
     authed: false,
-    singleBoardId: '',
   }
 
   componentDidMount() {
@@ -33,28 +31,22 @@ class App extends React.Component {
     this.removeListener();
   }
 
-  setSingleBoard = (boardId) => {
-    this.setState({ singleBoardId: boardId });
-  }
-
   render() {
-    const { authed, singleBoardId } = this.state;
+    const { authed } = this.state;
 
     const loadComponent = () => {
       let componentToLoad = '';
-      if (authed && singleBoardId.length === 0) {
-        componentToLoad = <BoardContainer setSingleBoard={this.setSingleBoard}/>;
-      } else if (authed && singleBoardId.length > 0) {
-        componentToLoad = <SingleBoard boardId={singleBoardId} setSingleBoard={this.setSingleBoard}/>;
+      if (authed) {
+        componentToLoad = <DashBoard/>;
       } else {
-        componentToLoad = <Auth />;
+        componentToLoad = <Auth/>;
       }
       return componentToLoad;
     };
 
     return (
       <div className="App">
-        <TheNavbar authed={authed}/>
+        <TheNavBar authed={authed}/>
         <h1>Creativo</h1>
         {loadComponent()}
       </div>
