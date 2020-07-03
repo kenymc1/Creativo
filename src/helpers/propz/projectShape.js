@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const projectShape = PropTypes.shape({
-  ProjectName: PropTypes.string.isRequired,
+  Name: PropTypes.string.isRequired,
   Client: PropTypes.string.isRequired,
   DateDue: PropTypes.string.isRequired,
   Description: PropTypes.string.isRequired,

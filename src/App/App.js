@@ -8,10 +8,10 @@ import Auth from '../components/Auth/Auth';
 import TheNavBar from '../components/TheNavBar/TheNavBar';
 // import Form from '../components/Form/Form';
 import DashBoard from '../components/DashBoard/DashBoard';
-import projectData from '../helpers/data/projectData';
+// import projectData from '../helpers/data/projectData';
 
 import './App.scss';
-import ProjectCard from '../components/ProjectCard/ProjectCard';
+// import ProjectCard from '../components/ProjectCard/ProjectCard';
 
 fbConnection();
 
@@ -51,7 +51,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <TheNavBar authed={authed}/>
-        <h1>Creativo</h1>
+        {/* <h1>Creativo</h1> */}
         {loadComponent()}
       </div>
     );

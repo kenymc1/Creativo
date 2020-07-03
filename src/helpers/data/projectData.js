@@ -21,9 +21,11 @@ const getProjectsByUid = (uid) => new Promise((resolve, reject) => {
 });
 const deleteCard = (projectId) => axios.delete(`${baseUrl}/projects/${projectId}.json`);
 
+const saveProject = (newProject) => axios.post(`${baseUrl}/projects.json`, newProject);
+
 export default {
   getProjectsByUid,
   deleteCard,
-  // savePlayer,
+  saveProject,
   // updatePlayer,
 };

@@ -1,17 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import './DashBoard.scss';
 
-// import Form from '../Form/Form';
 import projectData from '../../helpers/data/projectData';
-import ProjectCard from '../ProjectCard/ProjectCard';
 import authData from '../../helpers/data/authData';
+
+import Form from '../Form/Form';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 class DashBoard extends React.Component {
   state = {
     projects: [],
-
+    formOpen: false,
   }
 
   getAllProjects = () => {
@@ -25,19 +26,18 @@ class DashBoard extends React.Component {
   }
 
   removeCard = (projectId) => {
-    console.log('project', projectId);
     projectData.deleteCard(projectId).then(() => this.getAllProjects())
       .catch((err) => console.error('unable to delete card', err));
   }
 
-  // saveNewPlayer = (newPlayer) => {
-  //   playersData.savePlayer(newPlayer)
-  //     .then(() => {
-  //       this.getAllPlayers();
-  //       this.setState({ formOpen: false });
-  //     })
-  //     .catch((err) => console.error('unable to save player: ', err));
-  // }
+  saveNewProject = (newProject) => {
+    projectData.saveProject(newProject)
+      .then(() => {
+        this.getAllProjects();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error('unable to save project: ', err));
+  }
 
   // putPlayer = (playerId, updatePlayer) => {
   //   playersData.updatePlayer(playerId, updatePlayer)
@@ -54,13 +54,15 @@ class DashBoard extends React.Component {
 
   render() {
     // const { formOpen } = this.state;
-    const { projects } = this.state;
+    const { projects, formOpen } = this.state;
     // const { editPlayer } = this.state;
     const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} removeCard={this.removeCard}/>);
     return (
 
       <div className="DashBoard">
 
+          <button className="btn btn-warning align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
+        { formOpen ? <Form saveNewProject={this.saveNewProject}/> : ''}
         <div className="d-flex flex-wrap">
           {buildProjects}
         </div>

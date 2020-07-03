@@ -1,7 +1,7 @@
 {
   "projects": {
   "project1": {
-    "projectName": "Cool Song",
+    "name": "Cool Song",
     "clientName": "Kriss Rico",
     "dueDate": "12/12/20",
     "typeId":"music",
@@ -9,7 +9,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project2": {
-    "projectName": "Cool Song",
+    "name": "Cool Song",
     "clientName": "Kelly Rainbow",
     "dueDate": "8/12/20",
     "typeId":"music",
@@ -17,7 +17,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project3": {
-    "projectName": "Ron Song",
+    "name": "Ron Song",
     "clientName": "Ron White",
     "dueDate": "12/8/20",
     "typeId":"music",
@@ -25,7 +25,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project4": {
-    "projectName": "Sheila Song",
+    "name": "Sheila Song",
     "clientName": "Sheila Rosco",
     "dueDate": "10/08/20",
     "typeId":"music",
@@ -33,7 +33,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project5": {
-    "projectName": "Hide Shoot",
+    "name": "Hide Shoot",
     "clientName": " Rhonda Sing",
     "dueDate": "11/10/20",
     "typeId":"photography",
@@ -41,7 +41,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project6": {
-    "projectName": "Cool Song",
+    "name": "Cool Song",
     "clientName": "Kriss Rico",
     "dueDate": "10/1/20",
     "typeId":"photography",
@@ -49,7 +49,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project7": {
-    "projectName": "House Shoot",
+    "name": "House Shoot",
     "clientName": "Kelly Rainbow",
     "dueDate": "11/14/20",
     "typeId":"photography",
@@ -57,7 +57,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project8": {
-    "projectName": "Cool Song shoot",
+    "name": "Cool Song shoot",
     "clientName": "Kriss Rico",
     "dueDate": "08/12/20",
     "typeId":"photography",
@@ -65,7 +65,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project9": {
-    "projectName": "Kelly Song logo",
+    "name": "Kelly Song logo",
     "clientName": "Kelly Rainbow",
     "dueDate": "09/12/20",
     "typeId":"graphic",
@@ -73,7 +73,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project10": {
-    "projectName": "Cool Song",
+    "name": "Cool Song",
     "clientName": "Kriss Rico",
     "dueDate": "12/12/12",
     "typeId":"graphic",
@@ -81,7 +81,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project11": {
-    "projectName": "Cd Cover",
+    "name": "Cd Cover",
     "clientName": "Kriss Rico",
     "dueDate": "12/12/12",
     "typeId":"graphic",
@@ -89,7 +89,7 @@
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
   "project12": {
-    "projectName": "Johnny Logo",
+    "name": "Johnny Logo",
     "clientName": "Johnny Lang",
     "dueDate": "2/12/22",
     "typeId":"graphic",
@@ -97,7 +97,7 @@
     "uid": "123"
   },
   "project13": {
-    "projectName": "Launching Pad",
+    "name": "Launching Pad",
     "clientName": "Patricia ",
     "dueDate": "12/1/20",
     "typeId":"Video",
@@ -105,7 +105,7 @@
     "uid": "123"
   },
   "project14": {
-    "projectName": "Lyfe & Tymes",
+    "name": "Lyfe & Tymes",
     "clientName": "Kenny Mc",
     "dueDate": "10/11/20",
     "typeId":"Video",
