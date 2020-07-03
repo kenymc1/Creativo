@@ -63,9 +63,10 @@ class DashBoard extends React.Component {
 
           <button className="btn btn-warning align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
         { formOpen ? <Form saveNewProject={this.saveNewProject}/> : ''}
-        <div className="d-flex flex-wrap">
-          {buildProjects}
-        </div>
+
+              <div className=" d-flex flex-wrap">
+                {buildProjects}
+              </div>
       </div>
     );
   }
