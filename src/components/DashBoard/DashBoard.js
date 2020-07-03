@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import './DashBoard.scss';
 
@@ -26,19 +26,18 @@ class DashBoard extends React.Component {
   }
 
   removeCard = (projectId) => {
-    console.log('project', projectId);
     projectData.deleteCard(projectId).then(() => this.getAllProjects())
       .catch((err) => console.error('unable to delete card', err));
   }
 
-  // saveNewPlayer = (newPlayer) => {
-  //   playersData.savePlayer(newPlayer)
-  //     .then(() => {
-  //       this.getAllPlayers();
-  //       this.setState({ formOpen: false });
-  //     })
-  //     .catch((err) => console.error('unable to save player: ', err));
-  // }
+  saveNewProject = (newProject) => {
+    projectData.saveProject(newProject)
+      .then(() => {
+        this.getAllProjects();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error('unable to save project: ', err));
+  }
 
   // putPlayer = (playerId, updatePlayer) => {
   //   playersData.updatePlayer(playerId, updatePlayer)
@@ -62,8 +61,8 @@ class DashBoard extends React.Component {
 
       <div className="DashBoard">
 
-          <button className="btn btn-warning align-center"onClick={() => this.setState({ formOpen: true })}><i class="fas fa-plus-square"></i></button>
-        { formOpen ? <Form/> : ''}
+          <button className="btn btn-warning align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
+        { formOpen ? <Form saveNewProject={this.saveNewProject}/> : ''}
         <div className="d-flex flex-wrap">
           {buildProjects}
         </div>

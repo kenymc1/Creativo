@@ -24,7 +24,7 @@ class ProjectCard extends React.Component {
       <div className="card-header" id="headingOne">
         <h4 className="mb-0 row">
           <button className="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            {project.projectName}
+            {project.name}
           </button>
           <div className="delete-x ml-auto" onClick={this.deleteCardEvent}><i className="fas fa-times"></i></div>
         </h4>
