@@ -14,28 +14,41 @@ class Form extends React.Component {
     state = {
       projectName: '',
       projectClientName: '',
-    // dueDate: '',
-    // typeId: '',
-    // description: '',
+      ProjectDueDate: '',
+      projectTypeId: '',
+      projectDescription: '',
     }
 
     componentDidMount() {
       const { project } = this.props;
       if (project) {
-        this.setState({ projectName: project.Name, projectClientName: project.clientName });
+        this.setState({
+          projectName: project.Name,
+          projectClientName: project.clientName,
+          ProjectDueDate: project.dueDate,
+          projectTypeId: project.typeId,
+          projectDescription: project.description,
+        });
       }
     }
 
   saveProject = (e) => {
     e.preventDefault();
-    const { projectName, projectClientName } = this.state;
+    const {
+      projectName,
+      projectClientName,
+      ProjectDueDate,
+      projectTypeId,
+      projectDescription,
+
+    } = this.state;
     const { saveNewProject } = this.props;
     const newProject = {
       name: projectName,
       clientName: projectClientName,
-      // dueDate,
-      // typeId,
-      // description,
+      dueDate: ProjectDueDate,
+      typeId: projectTypeId,
+      description: projectDescription,
       uid: authData.getUid(),
     };
     saveNewProject(newProject);
@@ -51,22 +64,29 @@ clientChange = (e) => {
   this.setState({ projectClientName: e.target.value });
 }
 
-// dateChange = (e) => {
-//   e.preventDefault();
-//   this.setState({ dueDate: e.target.val });
-// }
+dateChange = (e) => {
+  e.preventDefault();
+  this.setState({ projectDueDate: e.target.value });
+}
 
-// typeChange = (e) => {
-//   e.preventDefault();
-//   this.setState({ projectName: e.target.val });
-// }
+typeChange = (e) => {
+  e.preventDefault();
+  this.setState({ projectType: e.target.val });
+}
 
-// descriptionChange = (e) => {
-//   e.preventDefault();
-//   this.setState({ description: e.target.val });
+descriptionChange = (e) => {
+  e.preventDefault();
+  this.setState({ projectDescription: e.target.val });
+}
 
 render() {
-  const { projectName, projectClientName } = this.state;
+  const {
+    projectName,
+    projectClientName,
+    projectDueDate,
+    projectType,
+    projectDescription,
+  } = this.state;
 
   return (
       <div className="projectForm">
@@ -93,6 +113,48 @@ render() {
             placeholder="Client Name"
             value={projectClientName}
              onChange={this.clientChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="form-date">Due Date</label>
+            <input
+            type="date"
+            className="form-control"
+            id="form-date"
+            placeholder="Client Name"
+            value={projectDueDate}
+             onChange={this.dateChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="form-type">Project Type</label>
+            <select id="form-typ" name="types">
+              <option value="Music">Music</option>
+              <option value="Photography">Photography</option>
+              <option value="Graphics">Graphics</option>
+              <option value="Video">Video</option>
+            </select>
+            <input
+            type="submit"
+            className="form-control"
+            id="form-type"
+            placeholder="Type"
+            value={projectType}
+             onChange={this.typeChange}
+            />
+          </div>
+
+          <div className="form-group" >
+            <label htmlFor="form-Description" >Description</label>
+            <input
+            type="textarea"
+            className="form-control"
+            id="form-Description"
+            placeholder="Description"
+            value={projectDescription}
+             onChange={this.descriptionChange}
             />
           </div>
 
