@@ -65,10 +65,10 @@ class DashBoard extends React.Component {
 
       <div className="DashBoard">
 
-          <button className="btn btn-primary m align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
+          <button className="btn btn-primary  align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
         { formOpen ? <Form saveNewProject={this.saveNewProject} project={editProject} putProject={this.putProject}/> : ''}
 
-              <div className=" d-flex flex-wrap">
+              <div className=" d-flex flex-wrap ">
                 {buildProjects}
               </div>
       </div>
