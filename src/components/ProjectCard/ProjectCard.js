@@ -35,18 +35,20 @@ class ProjectCard extends React.Component {
     const { project } = this.props;
     return (
 
-      <div className="card">
-      <div className="card-body">
+      <div className="Project col-4">
+     <div className="card">
+        <div className="card-body">
 
-        <button className="btn " onClick={this.deleteCardEvent}><i className="fas fa-trash-alt"></i></button>
-        <h3 className="card-title">{project.name}</h3>
-        <h6 className="card-subtitle mb-2 text-muted">{project.clientName}</h6>
-        <h4>{project.dueDate}</h4>
-        <h5>{project.typeId}</h5>
-        <p>{project.description}</p>
-        <button className="btn " onClick={this.openSingleProjectEvent}><i class="fas fa-eye"></i></button>
-        <button className="btn " onClick={this.editProjectEvent}><i className="fas fa-edit"></i></button>
-      </div>
+          <h3 className="card-title">{project.name}</h3>
+          <h6 className="card-subtitle mb-2 text-muted">{project.clientName}</h6>
+          <h4>{project.dueDate}</h4>
+          <h5>{project.typeId}</h5>
+          <p>{project.description}</p>
+          <button className="btn " onClick={this.openSingleProjectEvent}><i class="fas fa-eye"></i></button>
+          <button className="btn " onClick={this.editProjectEvent}><i className="fas fa-edit"></i></button>
+          <button className="btn " onClick={this.deleteCardEvent}><i className="fas fa-trash-alt"></i></button>
+        </div>
+     </div>
     </div>
 
     );

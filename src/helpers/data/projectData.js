@@ -19,6 +19,9 @@ const getProjectsByUid = (uid) => new Promise((resolve, reject) => {
     })
     .catch((err) => reject(err));
 });
+
+const getSingleProject = (projectId) => axios.get(`${baseUrl}/projects/${projectId}.json`);
+
 const deleteCard = (projectId) => axios.delete(`${baseUrl}/projects/${projectId}.json`);
 
 const saveProject = (newProject) => axios.post(`${baseUrl}/projects.json`, newProject);
@@ -26,6 +29,7 @@ const saveProject = (newProject) => axios.post(`${baseUrl}/projects.json`, newPr
 const updateProject = (projectId, updatedProject) => axios.put(`${baseUrl}/projects/${projectId}.json`, updatedProject);
 
 export default {
+  getSingleProject,
   getProjectsByUid,
   deleteCard,
   saveProject,

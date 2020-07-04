@@ -1,4 +1,14 @@
 .ProjectCard {
   display: block; 
+}
 
+.card {
+  margin: 10px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.card-title {
+  color: rgb(187, 4, 4);
 }
