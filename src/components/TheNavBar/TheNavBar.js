@@ -30,6 +30,37 @@ class TheNavBar extends React.Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 {
+
+                  authed
+                  // <button><i class="far fa-object-group"></i></button>
+                  // <button><i class="fas fa-video"></i></button>
+                    ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}><i class="fas fa-music"></i></button>
+                    : ''
+                }
+              </li>
+              <li className="nav-item">
+                {
+
+                  authed
+                  // <button><i class="far fa-object-group"></i></button>
+                  // <button><i class="fas fa-video"></i></button>
+                    ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}><i class="fas fa-camera"></i></button>
+                    : ''
+                }
+              </li>
+              <li className="nav-item">
+                {
+
+                  authed
+                  // <button><i class="far fa-object-group"></i></button>
+                  // <button><i class="fas fa-video"></i></button>
+                    ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}><i class="far fa-object-group"></i></button>
+                    : ''
+                }
+              </li>
+              <li className="nav-item">
+                {
+
                   authed
                     ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}>Sign Out</button>
                     : ''

@@ -1,10 +1,10 @@
 {
-  "projects": {
+ 
   "project1": {
     "name": "Cool Song",
     "clientName": "Kriss Rico",
     "dueDate": "12/12/20",
-    "typeId":"music",
+    "typeId":"type1",
     "description":"basic Reggaeton Track",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -12,7 +12,7 @@
     "name": "Cool Song",
     "clientName": "Kelly Rainbow",
     "dueDate": "8/12/20",
-    "typeId":"music",
+    "typeId":"type1",
     "description":"Hip Hop trap song",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -20,7 +20,7 @@
     "name": "Ron Song",
     "clientName": "Ron White",
     "dueDate": "12/8/20",
-    "typeId":"music",
+    "typeId":"type1",
     "description":"New track for Ron",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -28,7 +28,7 @@
     "name": "Sheila Song",
     "clientName": "Sheila Rosco",
     "dueDate": "10/08/20",
-    "typeId":"music",
+    "typeId":"type1",
     "description":"Slow Jam for Sheila",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -36,7 +36,7 @@
     "name": "Hide Shoot",
     "clientName": " Rhonda Sing",
     "dueDate": "11/10/20",
-    "typeId":"photography",
+    "typeId":"type2",
     "description":"basic Reggaeton Track",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -44,7 +44,7 @@
     "name": "Cool Song",
     "clientName": "Kriss Rico",
     "dueDate": "10/1/20",
-    "typeId":"photography",
+    "typeId":"type2",
     "description":"basic Reggaeton Track",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -52,7 +52,7 @@
     "name": "House Shoot",
     "clientName": "Kelly Rainbow",
     "dueDate": "11/14/20",
-    "typeId":"photography",
+    "typeId":"type2",
     "description":"promotional Shoot for Kelly Rainbow",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -60,7 +60,7 @@
     "name": "Cool Song shoot",
     "clientName": "Kriss Rico",
     "dueDate": "08/12/20",
-    "typeId":"photography",
+    "typeId":"type2",
     "description":"photos for cd cover",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -68,7 +68,7 @@
     "name": "Kelly Song logo",
     "clientName": "Kelly Rainbow",
     "dueDate": "09/12/20",
-    "typeId":"graphic",
+    "typeId":"type3",
     "description":"basic Reggaeton Track",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -76,7 +76,7 @@
     "name": "Cool Song",
     "clientName": "Kriss Rico",
     "dueDate": "12/12/12",
-    "typeId":"graphic",
+    "typeId":"type3",
     "description":"basic Reggaeton Track",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -84,7 +84,7 @@
     "name": "Cd Cover",
     "clientName": "Kriss Rico",
     "dueDate": "12/12/12",
-    "typeId":"graphic",
+    "typeId":"type3",
     "description":"cd cover for cool song",
     "uid": "MhQD53Ya0fVwZ0duZ5rP0X7UOg93"
   },
@@ -92,7 +92,7 @@
     "name": "Johnny Logo",
     "clientName": "Johnny Lang",
     "dueDate": "2/12/22",
-    "typeId":"graphic",
+    "typeId":"type3",
     "description":"basic company logo",
     "uid": "123"
   },
@@ -100,17 +100,16 @@
     "name": "Launching Pad",
     "clientName": "Patricia ",
     "dueDate": "12/1/20",
-    "typeId":"Video",
-    "description":"Info Video",
+    "typeId":"type4",
+    "description":"Info type4",
     "uid": "123"
   },
   "project14": {
     "name": "Lyfe & Tymes",
     "clientName": "Kenny Mc",
     "dueDate": "10/11/20",
-    "typeId":"Video",
+    "typeId":"type4",
     "description":"personal Vlog",
     "uid": "123"
   }
-}
 }

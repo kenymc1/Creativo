@@ -42,7 +42,7 @@ class ProjectCard extends React.Component {
           <h3 className="card-title">{project.name}</h3>
           <h6 className="card-subtitle mb-2 text-muted">{project.clientName}</h6>
           <h4>{project.dueDate}</h4>
-          <h5>{project.typeId}</h5>
+          <h5>{project.selectedType.name}</h5>
           <p>{project.description}</p>
           <button className="btn " onClick={this.openSingleProjectEvent}><i class="fas fa-eye"></i></button>
           <button className="btn " onClick={this.editProjectEvent}><i className="fas fa-edit"></i></button>

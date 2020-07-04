@@ -1,0 +1,6 @@
+{
+  "type1": {"name": "music"},
+  "type2": {"name": "photography"},
+  "type3": {"name": "graphics"},
+  "type4": {"name": "video"}
+}
