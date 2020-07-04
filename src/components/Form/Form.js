@@ -14,7 +14,7 @@ class Form extends React.Component {
     state = {
       projectName: '',
       projectClientName: '',
-      ProjectDueDate: '',
+      projectDueDate: '',
       projectTypeId: '',
       projectDescription: '',
       isEditing: false,
@@ -26,7 +26,7 @@ class Form extends React.Component {
         this.setState({
           projectName: project.name,
           projectClientName: project.clientName,
-          ProjectDueDate: project.dueDate,
+          projectDueDate: project.dueDate,
           projectTypeId: project.typeId,
           projectDescription: project.description,
           isEditing: true,
@@ -39,7 +39,7 @@ class Form extends React.Component {
     const {
       projectName,
       projectClientName,
-      ProjectDueDate,
+      projectDueDate,
       projectTypeId,
       projectDescription,
 
@@ -48,7 +48,7 @@ class Form extends React.Component {
     const newProject = {
       name: projectName,
       clientName: projectClientName,
-      dueDate: ProjectDueDate,
+      dueDate: projectDueDate,
       typeId: projectTypeId,
       description: projectDescription,
       uid: authData.getUid(),
@@ -73,7 +73,7 @@ dateChange = (e) => {
 
 typeChange = (e) => {
   e.preventDefault();
-  this.setState({ projectType: e.target.value });
+  this.setState({ projectTypeId: e.target.value });
 }
 
 descriptionChange = (e) => {
@@ -87,14 +87,14 @@ updateProject = (e) => {
   const {
     projectName,
     projectClientName,
-    ProjectDueDate,
+    projectDueDate,
     projectTypeId,
     projectDescription,
   } = this.state;
   const updatedProject = {
     name: projectName,
     clientName: projectClientName,
-    dueDate: ProjectDueDate,
+    dueDate: projectDueDate,
     typeId: projectTypeId,
     description: projectDescription,
     uid: authData.getUid(),
@@ -107,7 +107,7 @@ render() {
     projectName,
     projectClientName,
     projectDueDate,
-    projectType,
+    projectTypeId,
     projectDescription,
     isEditing,
   } = this.state;
@@ -141,12 +141,12 @@ render() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="form-date">Due Date</label>
+            <label htmlFor="form-client">Due Date</label>
             <input
-            type="date"
+            type="text"
             className="form-control"
-            id="form-date"
-            placeholder="Client Name"
+            id="form-client"
+            placeholder="Due Date"
             value={projectDueDate}
              onChange={this.dateChange}
             />
@@ -154,18 +154,12 @@ render() {
 
           <div className="form-group">
             <label htmlFor="form-type">Project Type</label>
-            <select id="form-typ" name="types">
-              <option value="Music">Music</option>
-              <option value="Photography">Photography</option>
-              <option value="Graphics">Graphics</option>
-              <option value="Video">Video</option>
-            </select>
             <input
             type="text"
-            className="form-control"
-            id="form-type"
-            placeholder="Type"
-            value={projectType}
+          className="form-control"
+          id="form-type"
+          placeholder="Project Type"
+            value={projectTypeId}
              onChange={this.typeChange}
             />
           </div>

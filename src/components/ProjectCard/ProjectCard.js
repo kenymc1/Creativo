@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import './ProjectCard.scss';
 import projectShape from '../../helpers/propz/projectShape';
+// import SingleProject from '../SingleProject/SingleProject';
 
 class ProjectCard extends React.Component {
   static propTypes = {
-    projects: projectShape.projectShape,
+    project: projectShape.projectShape,
+    setSingleProject: PropTypes.func.isRequired,
     removeCard: PropTypes.func.isRequired,
     editAProject: PropTypes.func.isRequired,
   }
@@ -23,35 +25,29 @@ class ProjectCard extends React.Component {
     editAProject(project);
   }
 
+  openSingleProjectEvent = (e) => {
+    e.preventDefault();
+    const { project, setSingleProject } = this.props;
+    setSingleProject(project.id);
+  }
+
   render() {
     const { project } = this.props;
     return (
 
-      <div className="col-4">
-        <div id="accordion">
-              <div className="card offset-1" >
-                  <div className="card-header" id="headingOne">
-                    <h4 className="mb-0 row">
-                       <button className="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        {project.name}
-                       </button>
-                      <div className="delete-x ml-auto" onClick={this.deleteCardEvent}><i className="fas fa-times"></i></div>
-                    </h4>
-                  </div>
+      <div className="card">
+      <div className="card-body">
 
-            <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-               <div className="card-body">
-                <h3>{project.clientName}</h3>
-                  <h5>{project.dueDate}</h5>
-                  <p>{project.description}</p>
-                <button className="btn btn-warning" onClick={this.editProjectEvent}><i class="fas fa-edit"></i></button>
-               </div>
-            </div>
-
-            </div>
-
-        </div>
+        <button className="btn " onClick={this.deleteCardEvent}><i className="fas fa-trash-alt"></i></button>
+        <h3 className="card-title">{project.name}</h3>
+        <h6 className="card-subtitle mb-2 text-muted">{project.clientName}</h6>
+        <h4>{project.dueDate}</h4>
+        <h5>{project.typeId}</h5>
+        <p>{project.description}</p>
+        <button className="btn " onClick={this.openSingleProjectEvent}><i class="fas fa-eye"></i></button>
+        <button className="btn " onClick={this.editProjectEvent}><i className="fas fa-edit"></i></button>
       </div>
+    </div>
 
     );
   }

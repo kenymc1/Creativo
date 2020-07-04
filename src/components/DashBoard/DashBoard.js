@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import './DashBoard.scss';
 
@@ -10,6 +10,10 @@ import Form from '../Form/Form';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
 class DashBoard extends React.Component {
+  static propTypes = {
+    setSingleProject: PropTypes.func.isRequired,
+  }
+
   state = {
     projects: [],
     formOpen: false,
@@ -55,8 +59,8 @@ class DashBoard extends React.Component {
 
   render() {
     const { projects, formOpen, editProject } = this.state;
-
-    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} editAProject={this.editAProject} removeCard={this.removeCard}/>);
+    const { setSingleProject } = this.props;
+    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} editAProject={this.editAProject} removeCard={this.removeCard} setSingleProject={setSingleProject}/>);
     return (
 
       <div className="DashBoard">
