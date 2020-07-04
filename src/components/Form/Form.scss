@@ -1,6 +1,17 @@
 .form {
-  display: block
+  display: block;
+  padding-bottom: 30px;
 }
 .form-Description {
   height: 300px;
 }
+.button, input, optgroup, select, textarea {
+
+  margin-bottom: 1em;
+ 
+}
+
+.projectForm {
+  margin-bottom: 20px;
+}
+

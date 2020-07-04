@@ -21,7 +21,7 @@ class TheNavBar extends React.Component {
     return (
       <div className="theNavBar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <button className="navbar-brand" href="#">Creativo</button>
+          <h1 className="navbar-brand" >CREATIVO</h1>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +31,7 @@ class TheNavBar extends React.Component {
               <li className="nav-item">
                 {
                   authed
-                    ? <button className="nav-link btn btn-danger" onClick={this.logMeOut}>Logout</button>
+                    ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}>Sign Out</button>
                     : ''
                 }
               </li>

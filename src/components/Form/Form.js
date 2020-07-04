@@ -17,17 +17,19 @@ class Form extends React.Component {
       ProjectDueDate: '',
       projectTypeId: '',
       projectDescription: '',
+      isEditing: false,
     }
 
     componentDidMount() {
       const { project } = this.props;
-      if (project) {
+      if (project.name) {
         this.setState({
-          projectName: project.Name,
+          projectName: project.name,
           projectClientName: project.clientName,
           ProjectDueDate: project.dueDate,
           projectTypeId: project.typeId,
           projectDescription: project.description,
+          isEditing: true,
         });
       }
     }
@@ -71,12 +73,33 @@ dateChange = (e) => {
 
 typeChange = (e) => {
   e.preventDefault();
-  this.setState({ projectType: e.target.val });
+  this.setState({ projectType: e.target.value });
 }
 
 descriptionChange = (e) => {
   e.preventDefault();
-  this.setState({ projectDescription: e.target.val });
+  this.setState({ projectDescription: e.target.value });
+}
+
+updateProject = (e) => {
+  e.preventDefault();
+  const { project, putProject } = this.props;
+  const {
+    projectName,
+    projectClientName,
+    ProjectDueDate,
+    projectTypeId,
+    projectDescription,
+  } = this.state;
+  const updatedProject = {
+    name: projectName,
+    clientName: projectClientName,
+    dueDate: ProjectDueDate,
+    typeId: projectTypeId,
+    description: projectDescription,
+    uid: authData.getUid(),
+  };
+  putProject(project.id, updatedProject);
 }
 
 render() {
@@ -86,6 +109,7 @@ render() {
     projectDueDate,
     projectType,
     projectDescription,
+    isEditing,
   } = this.state;
 
   return (
@@ -137,7 +161,7 @@ render() {
               <option value="Video">Video</option>
             </select>
             <input
-            type="submit"
+            type="text"
             className="form-control"
             id="form-type"
             placeholder="Type"
@@ -157,8 +181,11 @@ render() {
              onChange={this.descriptionChange}
             />
           </div>
+          { isEditing
+            ? <button className="btn btn-primary" onClick={this.updateProject}>Update Project</button>
+            : <button className="btn btn-primary" onClick={this.saveProject}>Add Project</button>
 
-          <button className="btn btn-primary" onClick={this.saveProject}>ADD</button>
+          }
 
       </form>
 

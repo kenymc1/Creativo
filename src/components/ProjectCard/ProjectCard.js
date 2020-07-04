@@ -8,6 +8,7 @@ class ProjectCard extends React.Component {
   static propTypes = {
     projects: projectShape.projectShape,
     removeCard: PropTypes.func.isRequired,
+    editAProject: PropTypes.func.isRequired,
   }
 
   deleteCardEvent = (e) => {
@@ -16,30 +17,41 @@ class ProjectCard extends React.Component {
     removeCard(project.id);
   }
 
+  editProjectEvent = (e) => {
+    e.preventDefault();
+    const { editAProject, project } = this.props;
+    editAProject(project);
+  }
+
   render() {
     const { project } = this.props;
     return (
-      <div id="accordion">
-    <div className="card offset-1" >
-      <div className="card-header" id="headingOne">
-        <h4 className="mb-0 row">
-          <button className="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            {project.name}
-          </button>
-          <div className="delete-x ml-auto" onClick={this.deleteCardEvent}><i className="fas fa-times"></i></div>
-        </h4>
-      </div>
 
-      <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-        <div className="card-body">
-    <h3>{project.clientName}</h3>
-          <h5>{project.dueDate}</h5>
-    <p>{project.description}</p>
-        <div><h4><i className="fas fa-edit ml-3"></i></h4></div>
+      <div className="col-4">
+        <div id="accordion">
+              <div className="card offset-1" >
+                  <div className="card-header" id="headingOne">
+                    <h4 className="mb-0 row">
+                       <button className="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        {project.name}
+                       </button>
+                      <div className="delete-x ml-auto" onClick={this.deleteCardEvent}><i className="fas fa-times"></i></div>
+                    </h4>
+                  </div>
+
+            <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+               <div className="card-body">
+                <h3>{project.clientName}</h3>
+                  <h5>{project.dueDate}</h5>
+                  <p>{project.description}</p>
+                <button className="btn btn-warning" onClick={this.editProjectEvent}><i class="fas fa-edit"></i></button>
+               </div>
+            </div>
+
+            </div>
+
         </div>
       </div>
-    </div>
-    </div>
 
     );
   }

@@ -13,6 +13,7 @@ class DashBoard extends React.Component {
   state = {
     projects: [],
     formOpen: false,
+    editProject: {},
   }
 
   getAllProjects = () => {
@@ -39,30 +40,29 @@ class DashBoard extends React.Component {
       .catch((err) => console.error('unable to save project: ', err));
   }
 
-  // putPlayer = (playerId, updatePlayer) => {
-  //   playersData.updatePlayer(playerId, updatePlayer)
-  //     .then(() => {
-  //       this.getAllPlayers();
-  //       this.setState({ formOpen: false, editPlayer: {} });
-  //     })
-  //     .catch((err) => console.error('unable to update player:', err));
-  // }
+  putProject= (projectId, updatedProject) => {
+    projectData.updateProject(projectId, updatedProject)
+      .then(() => {
+        this.getAllProjects();
+        this.setState({ formOpen: false, editProject: {} });
+      })
+      .catch((err) => console.error('unable to update projects:', err));
+  }
 
-  // editPlayer = (player) => {
-  //   this.setState({ formOpen: true, editPlayer: player });
-  // }
+  editAProject = (project) => {
+    this.setState({ formOpen: true, editProject: project });
+  }
 
   render() {
-    // const { formOpen } = this.state;
-    const { projects, formOpen } = this.state;
-    // const { editPlayer } = this.state;
-    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} removeCard={this.removeCard}/>);
+    const { projects, formOpen, editProject } = this.state;
+
+    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} editAProject={this.editAProject} removeCard={this.removeCard}/>);
     return (
 
       <div className="DashBoard">
 
-          <button className="btn btn-warning align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
-        { formOpen ? <Form saveNewProject={this.saveNewProject}/> : ''}
+          <button className="btn btn-primary m align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
+        { formOpen ? <Form saveNewProject={this.saveNewProject} project={editProject} putProject={this.putProject}/> : ''}
 
               <div className=" d-flex flex-wrap">
                 {buildProjects}
@@ -71,4 +71,5 @@ class DashBoard extends React.Component {
     );
   }
 }
+
 export default DashBoard;
