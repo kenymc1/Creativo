@@ -37,7 +37,7 @@ class SingleProject extends React.Component {
              <h3 className="card-title">{project.name}</h3>
              <h4>{project.clientName}</h4>
              <h3>{project.dueDate}</h3>
-             <h4>{project.typeId}</h4>
+             <h4>{project.name}</h4>
              <p>{project.description}</p>
            </div>
       </div>

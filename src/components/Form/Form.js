@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Form.scss';
 import authData from '../../helpers/data/authData';
+import typeData from '../../helpers/data/typeData';
 
 class Form extends React.Component {
     static propTypes = {
@@ -15,9 +16,10 @@ class Form extends React.Component {
       projectName: '',
       projectClientName: '',
       projectDueDate: '',
-      projectTypeId: '',
+      projectTypeId: 'type1',
       projectDescription: '',
       isEditing: false,
+      projectTypes: [],
     }
 
     componentDidMount() {
@@ -32,6 +34,7 @@ class Form extends React.Component {
           isEditing: true,
         });
       }
+      this.getProjectTypes();
     }
 
   saveProject = (e) => {
@@ -102,6 +105,12 @@ updateProject = (e) => {
   putProject(project.id, updatedProject);
 }
 
+getProjectTypes = () => {
+  typeData.getTypes()
+    .then((projectTypes) => this.setState({ projectTypes }))
+    .catch((err) => console.error('unable to get types', err));
+}
+
 render() {
   const {
     projectName,
@@ -110,8 +119,12 @@ render() {
     projectTypeId,
     projectDescription,
     isEditing,
+    projectTypes,
   } = this.state;
 
+  const buildTypeList = () => projectTypes.map((type) => (
+  <option key={type.id} value={type.id}>{type.name}</option>
+  ));
   return (
       <div className="projectForm">
         <form className="col-6 offset-3">
@@ -154,14 +167,15 @@ render() {
 
           <div className="form-group">
             <label htmlFor="form-type">Project Type</label>
-            <input
-            type="text"
+            <select
           className="form-control"
           id="form-type"
           placeholder="Project Type"
             value={projectTypeId}
              onChange={this.typeChange}
-            />
+            >
+              {buildTypeList()}
+            </select>
           </div>
 
           <div className="form-group" >

@@ -7,7 +7,7 @@ const projectsWithType = (projectId) => new Promise((resolve, reject) => {
   projectData.getProjectsByUid(uid)
     .then((allProjects) => {
       typeData.getTypes()
-        .then((allTypes) =>{
+        .then((allTypes) => {
           const finalProjects = [];
           allProjects.forEach((eachProject) => {
             const selectedType = allTypes.find((x) => x.id === eachProject.typeId);
@@ -16,7 +16,6 @@ const projectsWithType = (projectId) => new Promise((resolve, reject) => {
             finalProjects.push(projectCopy);
           });
           resolve(finalProjects);
-          console.log('finalProject', finalProjects);
         });
     })
     .catch((err) => reject(err));
