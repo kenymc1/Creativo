@@ -10,6 +10,8 @@ class TheNavBar extends React.Component {
     authed: PropTypes.bool.isRequired,
   }
 
+  state = { navbarType: '' }
+
   logMeOut = (e) => {
     e.preventDefault();
     firebase.auth().signOut();
@@ -17,6 +19,7 @@ class TheNavBar extends React.Component {
 
   render() {
     const { authed } = this.props;
+    const { navbarType } = this.state;
 
     return (
       <div className="theNavBar">
@@ -28,7 +31,7 @@ class TheNavBar extends React.Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 {
 
                   authed
@@ -37,8 +40,8 @@ class TheNavBar extends React.Component {
                     ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}><i class="fas fa-music"></i></button>
                     : ''
                 }
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 {
 
                   authed
@@ -47,8 +50,8 @@ class TheNavBar extends React.Component {
                     ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}><i class="fas fa-camera"></i></button>
                     : ''
                 }
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 {
 
                   authed
@@ -57,7 +60,7 @@ class TheNavBar extends React.Component {
                     ? <button className="nav-link btn btn-outline-light" onClick={this.logMeOut}><i class="far fa-object-group"></i></button>
                     : ''
                 }
-              </li>
+              </li> */}
               <li className="nav-item">
                 {
 

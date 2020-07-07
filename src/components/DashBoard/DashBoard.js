@@ -81,16 +81,14 @@ toggleDropdownType = () => {
       projects, formOpen, editProject, typesList, dropdownTypeOpen,
     } = this.state;
     const { setSingleProject } = this.props;
-    const buildProjects = projects.map((project) => <ProjectCard key={projects.id} project={project} editAProject={this.editAProject} removeCard={this.removeCard} setSingleProject={setSingleProject}/>);
+    // eslint-disable-next-line max-len
+    const buildProjects = projects.map((project) => <ProjectCard key={project.id} project={project} editAProject={this.editAProject} removeCard={this.removeCard} setSingleProject={setSingleProject}/>);
     const filterByType = (typeId) => {
       this.setState({ selectedType: typeId });
-      console.log('selectedType', this.state.selectedType);
-      // const uid = authData.getUid();
       smash.projectsWithType()
         .then((fbProjects) => {
           const filterList = fbProjects.filter((project) => project.typeId === this.state.selectedType);
           this.setState({ projects: filterList });
-          console.log('projects', projects);
           projects.map((project) => <ProjectCard key={projects.id} project={project} editAProject={this.editAProject} removeCard={this.removeCard} setSingleProject={setSingleProject}/>);
         })
 
