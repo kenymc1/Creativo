@@ -1,4 +1,8 @@
 import React from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 import PropTypes from 'prop-types';
 
 import './ProjectCard.scss';
@@ -37,10 +41,17 @@ class ProjectCard extends React.Component {
     return (
 
       <div className="Project col-4">
-     <div className="card">
-        <div className="card-body">
+        <Accordion>
+        <Card>
+    <Card.Header>
+      <Accordion.Toggle as={Button} variant="link" eventKey="0">
 
           <h3 className="card-title">{project.name}</h3>
+          </Accordion.Toggle>
+    </Card.Header>
+    <Accordion.Collapse eventKey="0">
+    <Card.Body>
+          <div class="panel-body">
           <h6 className="card-subtitle mb-2 text-muted">{project.clientName}</h6>
           <h4>{project.dueDate}</h4>
           <h5>{project.selectedType.name}</h5>
@@ -50,8 +61,11 @@ class ProjectCard extends React.Component {
           <button className="btn " onClick={this.editProjectEvent}><i className="fas fa-edit"></i></button>
           <button className="btn " onClick={this.deleteCardEvent}><i className="fas fa-trash-alt"></i></button>
         </div>
-     </div>
-    </div>
+          </Card.Body>
+    </Accordion.Collapse>
+  </Card>
+  </Accordion>
+        </div>
 
     );
   }
