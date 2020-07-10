@@ -23,8 +23,12 @@ class TheNavBar extends React.Component {
 
     return (
       <div className="theNavBar">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <h1 className="navbar-brand" >CREATIVO</h1>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+          {
+            authed
+              ? <img src="https://i.imgur.com/TUvjMar.png" width="100px"alt="logo" />
+              : ''
+          }
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

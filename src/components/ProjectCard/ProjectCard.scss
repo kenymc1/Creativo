@@ -9,9 +9,17 @@
   border-style: solid;
   border-width: 3px;
   border-radius: 5%;
-
 }
+
+.card .card:hover {
+  transform: translateX(-20px); 
+  transform: scale(1.1);
+  transition: 1s;
+  }
 
 .card-title {
   color: rgb(187, 4, 4);
+}
+.card {
+  cursor: pointer;
 }

@@ -138,7 +138,8 @@ render() {
              placeholder="Project Name"
              value={projectName}
              onChange={this.projectChange}
-             />
+            required
+            />
           </div>
 
           <div className="form-group">
