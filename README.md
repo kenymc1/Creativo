@@ -6,7 +6,8 @@ A list application designed to help creative people keep track of all of their c
 
 ## Technology Used
 Html, Css, Bootstrap, Reactstrap, Npm, React, Firebase, Json, Vs code,
-## Screenshots
+
+## Screenshots
 ![](img/Screen Shot 2020-07-11 at 8.37.33 AM.png)
 ![](img/header.png)
 ![](img/header.png)
