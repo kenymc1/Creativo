@@ -1,7 +1,7 @@
 
-# README.md
+## README.md
 
-## Description
+##  Description
 A list application designed to help creative people keep track of all of their current projects.
 
 ## Technology Used
@@ -10,7 +10,7 @@ Html, Css, Bootstrap, Reactstrap, Npm, React, Firebase, Json, Vs code,
 ![]
 
 
-## How to deploy
+## How to deploy
 * Clone down this project
 * Insall [ http-server](https://www.npmjs.com/)
 from npm
