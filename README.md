@@ -1,4 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# README.md
+
+## Description
+A list application designed to help creative people keep track of all of their current projects.
+
+## Technology Used
+Html, Css, Bootstrap, Reactstrap, Npm, React, Firebase, Json, Vs code,
+## Screenshots
+![]
+
+
+## How to deploy
+* Clone down this project
+* Insall [ http-server](https://www.npmjs.com/)
+from npm
+* At the root of this project run the following command `npm start`;
+
+* In your browser navigate to `http://localhost:8888`
 
 ## Available Scripts
 
@@ -13,6 +31,9 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ### `npm test`
+
+# Contributors
+Kenneth McEastland
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
