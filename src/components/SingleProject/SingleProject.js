@@ -32,6 +32,7 @@ class SingleProject extends React.Component {
       <div className="SingleProject">
     <div className="d-flex">
       <div className="card  card align-center col-6">
+    <img src="https://i.imgur.com/TUvjMar.png" width="100px"alt="logo" />
             <button className="btn ml-auto " onClick={() => { setSingleProject(''); }}>X</button>
            <div className="card-body">
              <h3 className="card-title">{project.name}</h3>

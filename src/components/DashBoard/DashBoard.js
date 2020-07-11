@@ -101,6 +101,7 @@ toggleDropdownType = () => {
     return (
 
       <div className="DashBoard">
+                <h1>PROJECTS</h1>
         <div className="row justify-content-center col-12">
               <div className="col-sm-4">
                 <Dropdown isOpen={dropdownTypeOpen} toggle={this.toggleDropdownType}>
@@ -117,6 +118,7 @@ toggleDropdownType = () => {
           <button className="btn btn-primary  align-center"onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus-square"></i></button>
 
         { formOpen ? <Form saveNewProject={this.saveNewProject} project={editProject} putProject={this.putProject}/> : ''}
+              <h6>click to add project</h6>
 
               <div className=" d-flex flex-wrap ">
                 {buildProjects}

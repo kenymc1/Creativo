@@ -43,19 +43,22 @@ class ProjectCard extends React.Component {
       <div className="Project col-4">
         <Accordion>
         <Card>
-    <Card.Header>
+    <Card.Header className="card-header">
       <Accordion.Toggle as={Button} variant="link" eventKey="0">
 
-          <h3 className="card-title">{project.name}</h3>
+          <h3 className="card-title">:: {project.name} ::</h3>
           </Accordion.Toggle>
     </Card.Header>
     <Accordion.Collapse eventKey="0">
     <Card.Body>
           <div class="panel-body">
-          <h6 className="card-subtitle mb-2 text-muted">{project.clientName}</h6>
+            <small>Client:</small>
+          <h5 className="card-subtitle mb-2 text-muted">{project.clientName}</h5>
+            <small>Date due:</small>
           <h4>{project.dueDate}</h4>
+            <small>Project Type:</small>
           <h5>{project.selectedType.name}</h5>
-
+            <small>Description:</small>
           <p>{project.description}</p>
           <button className="btn " onClick={this.openSingleProjectEvent}><i className="fas fa-eye"></i></button>
           <button className="btn " onClick={this.editProjectEvent}><i className="fas fa-edit"></i></button>
